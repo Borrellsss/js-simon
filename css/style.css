@@ -1,0 +1,25 @@
+/* **RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* *COUNTDOWN* */
+#counter-wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: #15202b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.counter-number {
+    font-family: sans-serif;
+    font-size: 15rem;
+    color: crimson;
+    display: none;
+}
+.active {
+    display: block;
+}

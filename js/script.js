@@ -49,6 +49,10 @@ const triesContainer = ["primo", "secondo", "terzo", "quarto", "quinto"];
 
 let userNumber;
 
+const counterSpan = document.querySelector(".counter-number");
+
+let counter = parseInt(counterSpan.innerHTML);
+
 // *LOGIC*
 // *alert con regole del gioco*
 alert(`sto per mostrarti ${memoNumbers} numeri randomici compresi tra 1 e ${memoNumbersRange}.\nAvrai tutto il tempo che vorrai per memorizzarli. Quando sarai pronto/a premi invio, dopodichè partirà un counter di 30 secondi al termine del quale inizierà ufficialmente il gioco. Tutto chiaro? Sei pronto/a?`);
@@ -62,6 +66,27 @@ alert(randomArray.join(",  "));
 
 // !console log di debug!
 console.log(randomArray);
+
+counterSpan.classList.add("active");
+
+const countDown = setInterval(function () {
+
+    if(counter === 1) {
+
+        clearInterval(countDown);
+
+        counterSpan.innerHTML = "GO!";
+
+    } else {
+
+        counter--;
+
+        counterSpan.innerHTML = counter;
+    }
+
+   
+
+}, 1000);
 
 setTimeout(function () {
 
@@ -103,4 +128,4 @@ setTimeout(function () {
 
     alert(`il tuo punteggio è ${guessedNumbersArray.length}!\nI numeri indovinati sono: ${guessedNumbersArray.join(",  ")}`)
 
-}, 30000);
+}, 30500);
