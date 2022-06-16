@@ -5,17 +5,60 @@
     box-sizing: border-box;
 }
 
-/* *COUNTDOWN* */
-#counter-wrapper {
-    width: 100vw;
-    height: 100vh;
+/* *COMMON* */
+body {
+    font-family: sans-serif;
     background-color: #15202b;
+}
+h1 {
+    font-size: 5rem;
+    color: white;
+    text-shadow: 0 0 5px white;
+}
+
+/* *HEADER* */
+header {
+    padding: 0.5rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* **SELECT MODE SECTION */
+#select-mode {
+    padding: 3rem 0 2rem;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
+    font-size: 1.5rem;
+    color: white;
+}
+#difficulty {
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* *START GAME SECTION* */
+#start-game {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+.start-btn {
+    padding: 0.5em 2em;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* *COUNTDOWN* */
+#counter-wrapper {
+    padding: 1rem 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
 }
 .counter-number {
-    font-family: sans-serif;
     font-size: 15rem;
     color: crimson;
     display: none;
